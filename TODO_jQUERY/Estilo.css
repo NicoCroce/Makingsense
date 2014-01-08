@@ -23,3 +23,29 @@
     width: 130px;
     padding-left: 0.5%;
 }
+    .item {
+    padding: 5px;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 5px 5px 5px 5px;
+    border-style: ridge ridge none ridge;
+    font-size: 16px;
+}
+    #check {
+    padding-left: 71px;
+    margin: 8px;
+    margin-right: 13px;
+}
+    .tachado {
+    text-decoration: line-through;
+}
+    #detalleTabla {
+    width: 600px;
+    border-collapse: separate;
+    border-spacing: 9px 1px;
+}
+    #detalleEstiloCell {
+    border-radius: 5px 5px 5px 5px;
+    -webkit-box-shadow: 0px 0px 10px rgb(180, 180, 180);
+    box-shadow: 0px 0px 10px rgb(180, 180, 180);
+    padding: 1px 1px 1px 11px;
+}

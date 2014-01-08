@@ -29,5 +29,8 @@ $(document).ready(function () {
         location.reload();
         return false;
     });
-
+    
+    $('#check').click(function(){
+        $(this).parent().addClass("tachado");
+    });
 });
