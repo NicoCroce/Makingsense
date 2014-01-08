@@ -14,14 +14,13 @@
     border: 1px solid rgb(218, 218, 218);
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
-    margin-top: 0px;
+    margin-top: -7px;
 }
     #btClear {
     padding-left: 0.5%;
 }
     #add {
     width: 130px;
-    padding-left: 0.5%;
 }
     .item {
     padding: 5px;
@@ -37,6 +36,7 @@
 }
     .tachado {
     text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.34);
 }
     #detalleTabla {
     width: 600px;
@@ -48,4 +48,35 @@
     -webkit-box-shadow: 0px 0px 10px rgb(180, 180, 180);
     box-shadow: 0px 0px 10px rgb(180, 180, 180);
     padding: 1px 1px 1px 11px;
+}
+    #lblTotal {
+    font-size: 20px;
+}
+    #lblRealizados {
+    font-size: 20px;
+    color: #27ff00;
+}
+    #lblSinHacer {
+    font-size: 20px;
+    color: red;
+}
+    .btElimina {
+    width: 0px;
+    margin-top: -5px;
+    margin-bottom: 4px;
+}
+    #eliminaSelec {
+    width: 196px;
+}
+    #time {
+    font-style: oblique;
+}
+    .timeP {
+    text-decoration: underline;
+    -webkit-box-shadow: 0px 0px 10px rgb(190, 190, 190);
+    box-shadow: 0px 0px 10px rgb(190, 190, 190);
+    border-radius: 20px;
+    margin-top: 2px;
+    padding: 6px;
+    width: 120px;
 }

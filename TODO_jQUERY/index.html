@@ -34,28 +34,44 @@
                             <input id="add" class="btn btn-primary" type="button" value="Add" />
                         </td>
                         <td id="btClear">
-                            <button id="clear" class="btn btn-warning" >Clear</button>
+                            <button id="clear" class="btn btn-warning">Clear</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p class="timeP">Time : <span id="time"> </span>  </p>
+                        </td>
+                        <td>
+                            <div class="btElimina">
+                                <input id="eliminaSelec" class="btn btn-danger" type="button" value="Elimina Selec" />
+                            </div>
                         </td>
                     </tr>
                 </table>
+
             </form>
 
             <div id="alert"></div>
             <ul id="todos"></ul>
+
             <table id="detalleTabla">
                 <td id="detalleEstiloCell">
-                    Total: <span id="lblTotal"></span>
+                    Total:
+                    <span id="lblTotal"></span>
                 </td>
                 <td id="detalleEstiloCell">
-                    Realizados: <span id="lblRealizados"></span>
+                    Realizados:
+                    <span id="lblRealizados"></span>
                 </td>
                 <td id="detalleEstiloCell">
-                    Por Hacer: <span id="lblSinHacer"></span>
+                    Por Hacer:
+                    <span id="lblSinHacer"></span>
                 </td>
             </table>
         </div>
     </section>
     <script src="Script.js"></script>
+    <script src="jTime.js"></script>
 </body>
 
 </html>

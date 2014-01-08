@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    $('#time').jTime();
+
     //Agregar elemento
     $('#add').click(function () {
         //Almacenos el valor del Txt en la variable Description.
@@ -11,7 +14,7 @@ $(document).ready(function () {
             return false;
         }
         //Agrega elemento a la lista TODOS con la descripción del txt.
-        $('#todos').prepend("<li class='item'><input id='check' name='check' type='checkbox'/>" + Description + "</li>");
+        $('#todos').prepend("<li class='item'><input id='check' class='check' name='check' type='checkbox'/>" + Description + "</li>");
         $('#form')[0].reset();
         //Obtengo el HTML de todos los TODOS y lo almaceno en una variable
         var todos = $('#todos').html();
@@ -29,8 +32,49 @@ $(document).ready(function () {
         location.reload();
         return false;
     });
-    
-    $('#check').click(function(){
-        $(this).parent().addClass("tachado");
+
+    $('.check').click(function () {
+        if ($(this).is(':checked')) {
+            $(this).parent().addClass("tachado");
+
+            cantidadPorHacer -= 1;
+            cantidadRealizado += 1;
+        } else {
+            $(this).parent().removeClass('tachado');
+
+            cantidadRealizado -= 1;
+            cantidadPorHacer += 1;
+        }
+        $('#lblRealizados').html(cantidadRealizado);
+        $('#lblSinHacer').html(cantidadPorHacer);
     });
+
+    $('#elimina').click(function () {
+        console.debug(this);
+    });
+
+
+
+    $('#eliminaSelec').click(function () {
+        $('#todos li').each(function () {
+            if ($(this).hasClass("tachado")) {
+                $(this).remove();
+            }
+        });
+        var todos = $('#todos').html();
+        localStorage.setItem('todos', todos);
+        location.reload();
+    });
+
+
+
+
+    var cantidadTotal = $('#todos li').size();
+    var cantidadRealizado = 0;
+    var cantidadPorHacer = cantidadTotal;
+
+    $('#lblTotal').html(cantidadTotal);
+    $('#lblRealizados').html(cantidadRealizado);
+    $('#lblSinHacer').html(cantidadPorHacer);
+    console.log(cantidadTotal);
 });
