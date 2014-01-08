@@ -1,9 +1,9 @@
-#Principal {
+#main {
     width: 600px;
     padding-top: 40px;
     margin: 0 auto;
 }
-    #ContenedorTexto {
+    #txtContainer {
     width: 400px;
 }
     #description {
@@ -34,16 +34,16 @@
     margin: 8px;
     margin-right: 13px;
 }
-    .tachado {
+    .lineThrough {
     text-decoration: line-through;
     color: rgba(0, 0, 0, 0.34);
 }
-    #detalleTabla {
+    #detailTable {
     width: 600px;
     border-collapse: separate;
     border-spacing: 9px 1px;
 }
-    #detalleEstiloCell {
+    .styleCell {
     border-radius: 5px 5px 5px 5px;
     -webkit-box-shadow: 0px 0px 10px rgb(180, 180, 180);
     box-shadow: 0px 0px 10px rgb(180, 180, 180);
@@ -52,20 +52,20 @@
     #lblTotal {
     font-size: 20px;
 }
-    #lblRealizados {
+    #lblComplete {
     font-size: 20px;
     color: #27ff00;
 }
-    #lblSinHacer {
+    #lblToDo {
     font-size: 20px;
     color: red;
 }
-    .btElimina {
+    .btDelete {
     width: 0px;
     margin-top: -5px;
     margin-bottom: 4px;
 }
-    #eliminaSelec {
+    #deleteSelec {
     width: 196px;
 }
     #time {

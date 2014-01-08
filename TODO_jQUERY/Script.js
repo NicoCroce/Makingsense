@@ -35,29 +35,24 @@ $(document).ready(function () {
 
     $('.check').click(function () {
         if ($(this).is(':checked')) {
-            $(this).parent().addClass("tachado");
+            $(this).parent().addClass("lineThrough");
 
-            cantidadPorHacer -= 1;
-            cantidadRealizado += 1;
+            toDoAmount -= 1;
+            completeAmount += 1;
         } else {
-            $(this).parent().removeClass('tachado');
+            $(this).parent().removeClass('lineThrough');
 
-            cantidadRealizado -= 1;
-            cantidadPorHacer += 1;
+            completeAmount -= 1;
+            toDoAmount += 1;
         }
-        $('#lblRealizados').html(cantidadRealizado);
-        $('#lblSinHacer').html(cantidadPorHacer);
-    });
-
-    $('#elimina').click(function () {
-        console.debug(this);
+        $('#lblComplete').html(completeAmount);
+        $('#lblToDo').html(toDoAmount);
     });
 
 
-
-    $('#eliminaSelec').click(function () {
+    $('#deleteSelec').click(function () {
         $('#todos li').each(function () {
-            if ($(this).hasClass("tachado")) {
+            if ($(this).hasClass("lineThrough")) {
                 $(this).remove();
             }
         });
@@ -69,12 +64,11 @@ $(document).ready(function () {
 
 
 
-    var cantidadTotal = $('#todos li').size();
-    var cantidadRealizado = 0;
-    var cantidadPorHacer = cantidadTotal;
+    var totalAmount = $('#todos li').size();
+    var completeAmount = 0;
+    var toDoAmount = totalAmount;
 
-    $('#lblTotal').html(cantidadTotal);
-    $('#lblRealizados').html(cantidadRealizado);
-    $('#lblSinHacer').html(cantidadPorHacer);
-    console.log(cantidadTotal);
+    $('#lblTotal').html(totalAmount);
+    $('#lblComplete').html(completeAmount);
+    $('#lblToDo').html(toDoAmount);
 });
